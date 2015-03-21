@@ -14,7 +14,7 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(course_params)
     if @course.save
-      redirect_to root_path, notice: 'Course was saved'
+      redirect_to new_course_lesson_path(@course), notice: 'Course was saved'
     else
       render "new", alert: 'It was not saved'
     end
