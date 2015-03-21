@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'users/show'
 
   resources :lessons
+  resources :courses
   root 'static_pages#home'
 
   # The priority is based upon order of creation: first created -> highest priority.
